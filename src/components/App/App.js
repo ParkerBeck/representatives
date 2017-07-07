@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import AddressInput from '../../containers/AddressInput/address_input'
-import RepresentativeList from '../../containers/RepresentativeList/representative_list'
+import AddressInput from '../AddressInput/address_input'
+import RepresentativeList from '../RepresentativeList/representative_list'
 
 class App extends Component {
   render() {
