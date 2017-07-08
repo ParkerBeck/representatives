@@ -2,21 +2,13 @@ import React from 'react';
 
 import './representative_block.css';
 
-
-const partyColor = (party) => {
-    switch(party) {
-        case "Republican": return "#FF0000";
-        case "Democratic": return "#0000FF";
-        default: return "#000000";
-    }
-
-};
+import PartyColor from '../../helpers/party_color.js';
 
 export default (props) => {
     const placeholder = `http://placehold.it/213x200?text=${props.official.name}`.split(' ').join('+');
-    const color = {
-        color: partyColor(props.official.party)
-    };
+    const titleStyle = {
+        color: PartyColor(props.official.party)
+    }
     return (
         <div className="card">
             <img 
@@ -24,9 +16,9 @@ export default (props) => {
                 //short circuit
                 src={ props.official.photoUrl ||
                         placeholder }
-                alt="" />
+                alt="Representative" />
             <div className="card-block">
-                <h4 className="card-title" style={color}>{props.official.name}</h4>
+                <h4 className="card-title" style={titleStyle}>{props.official.name}</h4>
                 <p className="card-text">{props.office}</p>
             </div>
         </div>

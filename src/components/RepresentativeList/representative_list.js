@@ -13,7 +13,6 @@ class RepresentativeList extends Component {
                 representative.officials.map( official => {
                     return <RepresentativeBlock key={official.name} office={representative.office} official={official}/>
                 })
-
         );
     }
     
